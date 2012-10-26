@@ -1,0 +1,4 @@
+#!/bin/sh
+ps -eaf | grep $1 | grep -v grep | grep -v myps
+
+

@@ -1,0 +1,11 @@
+#!/bin/sh
+
+if [ $# -ne 1 ]; then
+ echo Please supply a file name.
+ exit 0
+fi
+
+DAT=`date -u +%s`
+cp -r $1 $DAT$1
+
+exit 0

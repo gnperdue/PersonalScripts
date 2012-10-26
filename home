@@ -1,0 +1,5 @@
+#!/bin/bash
+
+osascript -e 'tell application "Finder"' -e 'activate' -e 'open home' -e 'end tell'
+
+exit 0

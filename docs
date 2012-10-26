@@ -1,0 +1,5 @@
+#!/bin/bash
+
+osascript -e 'tell application "Finder"' -e 'activate' -e 'open folder "Documents" of folder "gnperdue" of folder "Users" of disk "Macintosh HD"' -e 'end tell'
+
+exit 0

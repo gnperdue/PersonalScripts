@@ -1,0 +1,25 @@
+#!/usr/bin/perl
+
+$targetDirectory = $ENV{PWD}."/";
+if ($#ARGV < 0 ) {
+	$osascriptCommand = "osascript -e \'tell application \"Finder\"\'";
+	$osascriptCommand = $osascriptCommand." -e \'activate\'";
+	$osascriptCommand = $osascriptCommand." -e \'open POSIX file \"${targetDirectory}\"\'";
+	$osascriptCommand = $osascriptCommand." -e \'end tell\'";
+	# print "$targetDirectory\n";
+	system($osascriptCommand);
+} else {
+	# Open all directories provided.  Must be correctly formatted paths.
+	$i = 0;
+	while ($i <= $#ARGV) {
+		$targetDirectory = $ARGV[$i]."/";
+		if ($targetDirectory eq "./") { $targetDirectory = $ENV{PWD}."/"; }
+		$osascriptCommand = "osascript -e \'tell application \"Finder\"\'";
+		$osascriptCommand = $osascriptCommand." -e \'activate\'";
+		$osascriptCommand = $osascriptCommand." -e \'open POSIX file \"${targetDirectory}\"\'";
+		$osascriptCommand = $osascriptCommand." -e \'end tell\'";
+		# print "$targetDirectory\n";
+		system($osascriptCommand);
+		$i++;		
+	}
+}
