@@ -1,0 +1,3 @@
+#!/bin/sh
+
+for T in `ls -a $*`; do perl -pi -e 's/\r\n?/\n/g' $T; done
