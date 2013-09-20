@@ -1,0 +1,2 @@
+#!/bin/sh
+echo $DYLD_LIBRARY_PATH | tr \: \\n

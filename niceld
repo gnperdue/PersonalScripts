@@ -1,0 +1,2 @@
+#!/bin/sh
+echo $LD_LIBRARY_PATH | tr \: \\n
