@@ -7,4 +7,7 @@ valid directory provided (it does not handle error well).
 * fixWinLE - bash and perl - Change Windows-style carriage returns to Unix-style.
 * home - bash - open a Finder window in the user HOME area from Terminal.app in Mac OSX.
 * myps - bash - add some extra grep filtering to a ps command.
+* nicedyld - bash - pretty print the DYLD_LIBRARY_PATH
+* niceld - bash - pretty print the LD_LIBRARY_PATH
+* nicepath - bash - pretty print the PATH
 * tstamp - bash - copy a file or directory into a new object with a new name of {date}{old name}.
