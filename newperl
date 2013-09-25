@@ -1,0 +1,18 @@
+#!/usr/bin/env perl
+
+if ($#ARGV + 1 < 1 ) {
+  print " USAGE:\n";
+  print "   newperl <script name.pl>\n";
+  exit 1;
+}
+
+my $newfile = $ARGV[0];
+open (NEW,">$newfile") or die "ERROR: Can't open $newfile\n";
+
+print NEW "#!/usr/bin/env perl\n\n";
+print NEW "use Modern::Perl \'2013\'\;\n";
+print NEW "use autodie\;\n";
+
+close (NEW);
+
+system("chmod u+x $newfile");
