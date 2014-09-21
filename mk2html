@@ -1,0 +1,25 @@
+#!/usr/bin/env perl
+
+# Use Slurp for `read_file`, and Markdown for the `markdown` converter.
+use File::Slurp;
+use Text::Markdown 'markdown';
+
+# Get the .markdown filename and prepare the text as one large string.
+my $file = $ARGV[0];
+my $text = read_file($file);
+
+# Get the html name by dropping the ".markdown/txt" extension and 
+# repalcing it with ".html". We are removing the last element returned
+# by splitting on "." and then putting the rest back together in case
+# the filename has a "." inside of it aside from the file type marker.
+my @filename_parts = split(/\./, $file);
+pop(@filename_parts);
+my $htmlname = join('', @filename_parts);
+$htmlname = $htmlname.".html";
+print "Printing HTML to $htmlname\n";
+
+# Open the output file, convert the markdown to html, and write the file.
+open HTMOUT, ">./$htmlname" or die "Can't open html out!";
+my $html = markdown($text);
+print HTMOUT $html;
+close(HTMOUT);
