@@ -6,6 +6,7 @@ script accepts an arbitrary number of arguments and will attempt to open a Finde
 valid directory provided (it does not handle error well).
 * fixWinLE - bash and perl - Change Windows-style carriage returns to Unix-style.
 * home - bash - open a Finder window in the user HOME area from Terminal.app in Mac OSX.
+* mk2html - perl - convert a markdown file to html. The new filename will look like "my.file.markdown -> my.file.html".
 * myps - bash - add some extra grep filtering to a ps command.
 * newperl - make a basic skeleton for Perl scripts.
 * nicedyld - bash - pretty print the DYLD_LIBRARY_PATH
