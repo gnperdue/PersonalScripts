@@ -1,0 +1,8 @@
+#!/bin/bash
+
+NAME='default'
+if [ $# -gt 0 ]; then
+  NAME=$1
+fi
+
+docker-machine url $NAME | perl -ne '@l=split(":");print split("/",@l[1]);print "\n";'
