@@ -1,7 +1,7 @@
 These are personal scripts aimed at increasing productivity.
 
 Last updated: ?
-Last intalled: 2020-12-27
+Last intalled: 2025-07-02 (on a 2025 MacBook Pro)
 
 * docs - bash - open a Finder window in the documents folder from Terminal.app on Mac OSX.
 * finder - perl - open a Finder window in the current folder from Terminal.app on Mac OSX. The 
